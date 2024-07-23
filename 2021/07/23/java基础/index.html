@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>java基础 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="基本数据类型 byte&#x2F;8 char&#x2F;16 short&#x2F;16 int&#x2F;32 float&#x2F;32 long&#x2F;64 double&#x2F;64 boolean&#x2F;~  8  euqals()除了string类是比较值以外，跟 &#x3D;&#x3D; 是一样的，比较两个引用是否引用同一对象，因为string类重写了equals方法 包">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java基础">
+<meta property="og:url" content="http://example.com/2021/07/23/java%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="基本数据类型 byte&#x2F;8 char&#x2F;16 short&#x2F;16 int&#x2F;32 float&#x2F;32 long&#x2F;64 double&#x2F;64 boolean&#x2F;~  8  euqals()除了string类是比较值以外，跟 &#x3D;&#x3D; 是一样的，比较两个引用是否引用同一对象，因为string类重写了equals方法 包">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-07-23T01:56:22.000Z">
+<meta property="article:modified_time" content="2024-07-23T02:07:11.919Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-java基础" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/07/23/java%E5%9F%BA%E7%A1%80/" class="article-date">
+  <time class="dt-published" datetime="2021-07-23T01:56:22.000Z" itemprop="datePublished">2021-07-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      java基础
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><ul>
+<li>byte&#x2F;8</li>
+<li>char&#x2F;16</li>
+<li>short&#x2F;16</li>
+<li>int&#x2F;32</li>
+<li>float&#x2F;32</li>
+<li>long&#x2F;64</li>
+<li>double&#x2F;64</li>
+<li>boolean&#x2F;~  8</li>
+</ul>
+<p>euqals()除了string类是比较值以外，跟 &#x3D;&#x3D; 是一样的，比较两个引用是否引用同一对象，因为string类重写了equals方法</p>
+<h3 id="包装类型"><a href="#包装类型" class="headerlink" title="包装类型"></a>包装类型</h3><p>基本类型都有对应的包装类型，基本类型与其对应的包装类型之间的赋值使用自动装箱与拆箱完成。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Integer</span> <span class="variable">x</span> <span class="operator">=</span> <span class="number">2</span>;     <span class="comment">// 装箱 调用了 Integer.valueOf(2)</span></span><br><span class="line"><span class="type">int</span> <span class="variable">y</span> <span class="operator">=</span> x;         <span class="comment">// 拆箱 调用了 X.intValue()</span></span><br></pre></td></tr></table></figure>
+
+<p>int和integer可以直接比较大小，因为有自动拆箱</p>
+<h3 id="final和finally的区别"><a href="#final和finally的区别" class="headerlink" title="final和finally的区别"></a>final和finally的区别</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">final修饰的类是不能被继承的，因为其是一个最终类；</span><br><span class="line">final修饰的数据是一个常量，只能被赋值一次；</span><br><span class="line">final修饰的方法也不能重写，但能被重载；</span><br><span class="line">内部类只能访问被final修饰的局部变量。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">finally块通常放在try、catch的后面</span><br><span class="line">finally中的语句是正常执行或者处理异常之后必须执行的语句</span><br></pre></td></tr></table></figure>
+
+<h3 id="String-StringBuffer-and-StringBuilder"><a href="#String-StringBuffer-and-StringBuilder" class="headerlink" title="String, StringBuffer and StringBuilder"></a>String, StringBuffer and StringBuilder</h3><p><strong>1. 可变性</strong></p>
+<ul>
+<li>String 不可变</li>
+<li>StringBuffer 和 StringBuilder 可变</li>
+</ul>
+<p><strong>2. 线程安全</strong></p>
+<ul>
+<li>String 不可变，因此是线程安全的</li>
+<li>StringBuilder 不是线程安全的</li>
+<li>StringBuffer 是线程安全的，内部使用 synchronized 进行同步</li>
+</ul>
+<p><strong>补充</strong>：String类内部数组定义为final类型，所以不可变，string类也被声明为final类型，所以不可被继承。</p>
+<p>jdk1.8及以前String使用的是char数组，jdk1.9及以后使用的是byte数组。</p>
+<p>因为开发人员发现人们使用的字符串值是拉丁字符居多而之前使用的char数组每一个char占用两个字节而拉丁字符只需要一个字节就可以存储，剩下的一个字节就浪费了，造成内存的浪费，gc的更加频繁。因此在jdk9中将String底层的实现改为了byte数组。</p>
+<h4 id="StringBuffer与String的相互转换"><a href="#StringBuffer与String的相互转换" class="headerlink" title="StringBuffer与String的相互转换"></a><strong>StringBuffer与String的相互转换</strong></h4><p><strong>1、将StringBuffer转换成String</strong></p>
+<p>1）toString()</p>
+<p>2）String类中的构造函数     newString(buffer)</p>
+<p><strong>2、将String转换成StringBuffer</strong></p>
+<p>1）利用构造函数      new  StringBuffer(str)</p>
+<p>2）调用append方法</p>
+<h3 id="java有几种传参方式"><a href="#java有几种传参方式" class="headerlink" title="java有几种传参方式"></a>java有几种传参方式</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/q5706503/article/details/82910428?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.control&dist_request_id=&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.control">java的传参方式</a></p>
+<p>只有<strong>值传递</strong>的方式，没有引用传递，<strong>基本数据类型</strong>在参数传递时并没有传进变量本身,</p>
+<p>而是<strong>创建了一个新的相同数值的变量</strong>, 函数修改这个新变量并没有影响原来变量的数值,这也是<strong>按值传递的特点</strong></p>
+<p><strong>那为什么对象a的数据就改变了呢?</strong></p>
+<p>因为虽然也是按值传递, 复制了一份新的引用但是指向的对象是同一个,修改后会影响原对象</p>
+<h3 id="抽象类和接口"><a href="#抽象类和接口" class="headerlink" title="抽象类和接口"></a>抽象类和接口</h3><p>抽象类的类名和方法都要用absract修饰，抽象类不能被实例化，只能被继承，一个类包含抽象方法，这个类必须声明为抽象类。</p>
+<p>jdk8以后，接口可以有静态方法和默认方法。接口用interface修饰，接口可以继承（继承多个接口），接口不能实例化</p>
+<h3 id="封装、继承、多态"><a href="#封装、继承、多态" class="headerlink" title="封装、继承、多态"></a>封装、继承、多态</h3><p>封装：属性和方法封装到类的内部，通过对象来调用</p>
+<p>继承：子类需要复用父类里面的属性或者方法</p>
+<p>多态：父类引用指向子类实例</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/07/23/java%E5%9F%BA%E7%A1%80/" data-id="clyxstfc6000244ut13sf567p" data-title="java基础" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/07/23/mysql%E9%AB%98%E7%BA%A7/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          mysql高级
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/07/23/JUC/">JUC</a>
+          </li>
+        
+          <li>
+            <a href="/2024/07/22/rabbitMq/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/07/22/redis%E6%95%99%E7%A8%8B/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/23/JVM/">JVM</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/23/mysql%E7%B4%A2%E5%BC%95/">mysql索引</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
