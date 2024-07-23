@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | Hexo</title>
+  <title>java基础 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="基本数据类型 byte&#x2F;8 char&#x2F;16 short&#x2F;16 int&#x2F;32 float&#x2F;32 long&#x2F;64 double&#x2F;64 boolean&#x2F;~  8  euqals()除了string类是比较值以外，跟 &#x3D;&#x3D; 是一样的，比较两个引用是否引用同一对象，因为string类重写了equals方法 包">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java基础">
+<meta property="og:url" content="http://example.com/2021/07/23/java%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="基本数据类型 byte&#x2F;8 char&#x2F;16 short&#x2F;16 int&#x2F;32 float&#x2F;32 long&#x2F;64 double&#x2F;64 boolean&#x2F;~  8  euqals()除了string类是比较值以外，跟 &#x3D;&#x3D; 是一样的，比较两个引用是否引用同一对象，因为string类重写了equals方法 包">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-07-23T01:56:22.000Z">
+<meta property="article:modified_time" content="2024-07-23T02:07:11.919Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -150,49 +154,194 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-java基础" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/07/23/java%E5%9F%BA%E7%A1%80/" class="archive-article-date">
-  	<time datetime="2021-07-23T01:56:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-23</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/07/23/java%E5%9F%BA%E7%A1%80/">java基础</a>
+    <h1 class="article-title" itemprop="name">
+      java基础
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2021/07/23/java%E5%9F%BA%E7%A1%80/" class="archive-article-date">
+  	<time datetime="2021-07-23T01:56:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><ul>
+<li>byte&#x2F;8</li>
+<li>char&#x2F;16</li>
+<li>short&#x2F;16</li>
+<li>int&#x2F;32</li>
+<li>float&#x2F;32</li>
+<li>long&#x2F;64</li>
+<li>double&#x2F;64</li>
+<li>boolean&#x2F;~  8</li>
+</ul>
+<p>euqals()除了string类是比较值以外，跟 &#x3D;&#x3D; 是一样的，比较两个引用是否引用同一对象，因为string类重写了equals方法</p>
+<h3 id="包装类型"><a href="#包装类型" class="headerlink" title="包装类型"></a>包装类型</h3><p>基本类型都有对应的包装类型，基本类型与其对应的包装类型之间的赋值使用自动装箱与拆箱完成。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Integer</span> <span class="variable">x</span> <span class="operator">=</span> <span class="number">2</span>;     <span class="comment">// 装箱 调用了 Integer.valueOf(2)</span></span><br><span class="line"><span class="type">int</span> <span class="variable">y</span> <span class="operator">=</span> x;         <span class="comment">// 拆箱 调用了 X.intValue()</span></span><br></pre></td></tr></table></figure>
 
+<p>int和integer可以直接比较大小，因为有自动拆箱</p>
+<h3 id="final和finally的区别"><a href="#final和finally的区别" class="headerlink" title="final和finally的区别"></a>final和finally的区别</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">final修饰的类是不能被继承的，因为其是一个最终类；</span><br><span class="line">final修饰的数据是一个常量，只能被赋值一次；</span><br><span class="line">final修饰的方法也不能重写，但能被重载；</span><br><span class="line">内部类只能访问被final修饰的局部变量。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">finally块通常放在try、catch的后面</span><br><span class="line">finally中的语句是正常执行或者处理异常之后必须执行的语句</span><br></pre></td></tr></table></figure>
+
+<h3 id="String-StringBuffer-and-StringBuilder"><a href="#String-StringBuffer-and-StringBuilder" class="headerlink" title="String, StringBuffer and StringBuilder"></a>String, StringBuffer and StringBuilder</h3><p><strong>1. 可变性</strong></p>
+<ul>
+<li>String 不可变</li>
+<li>StringBuffer 和 StringBuilder 可变</li>
+</ul>
+<p><strong>2. 线程安全</strong></p>
+<ul>
+<li>String 不可变，因此是线程安全的</li>
+<li>StringBuilder 不是线程安全的</li>
+<li>StringBuffer 是线程安全的，内部使用 synchronized 进行同步</li>
+</ul>
+<p><strong>补充</strong>：String类内部数组定义为final类型，所以不可变，string类也被声明为final类型，所以不可被继承。</p>
+<p>jdk1.8及以前String使用的是char数组，jdk1.9及以后使用的是byte数组。</p>
+<p>因为开发人员发现人们使用的字符串值是拉丁字符居多而之前使用的char数组每一个char占用两个字节而拉丁字符只需要一个字节就可以存储，剩下的一个字节就浪费了，造成内存的浪费，gc的更加频繁。因此在jdk9中将String底层的实现改为了byte数组。</p>
+<h4 id="StringBuffer与String的相互转换"><a href="#StringBuffer与String的相互转换" class="headerlink" title="StringBuffer与String的相互转换"></a><strong>StringBuffer与String的相互转换</strong></h4><p><strong>1、将StringBuffer转换成String</strong></p>
+<p>1）toString()</p>
+<p>2）String类中的构造函数     newString(buffer)</p>
+<p><strong>2、将String转换成StringBuffer</strong></p>
+<p>1）利用构造函数      new  StringBuffer(str)</p>
+<p>2）调用append方法</p>
+<h3 id="java有几种传参方式"><a href="#java有几种传参方式" class="headerlink" title="java有几种传参方式"></a>java有几种传参方式</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/q5706503/article/details/82910428?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.control&dist_request_id=&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.control">java的传参方式</a></p>
+<p>只有<strong>值传递</strong>的方式，没有引用传递，<strong>基本数据类型</strong>在参数传递时并没有传进变量本身,</p>
+<p>而是<strong>创建了一个新的相同数值的变量</strong>, 函数修改这个新变量并没有影响原来变量的数值,这也是<strong>按值传递的特点</strong></p>
+<p><strong>那为什么对象a的数据就改变了呢?</strong></p>
+<p>因为虽然也是按值传递, 复制了一份新的引用但是指向的对象是同一个,修改后会影响原对象</p>
+<h3 id="抽象类和接口"><a href="#抽象类和接口" class="headerlink" title="抽象类和接口"></a>抽象类和接口</h3><p>抽象类的类名和方法都要用absract修饰，抽象类不能被实例化，只能被继承，一个类包含抽象方法，这个类必须声明为抽象类。</p>
+<p>jdk8以后，接口可以有静态方法和默认方法。接口用interface修饰，接口可以继承（继承多个接口），接口不能实例化</p>
+<h3 id="封装、继承、多态"><a href="#封装、继承、多态" class="headerlink" title="封装、继承、多态"></a>封装、继承、多态</h3><p>封装：属性和方法封装到类的内部，通过对象来调用</p>
+<p>继承：子类需要复用父类里面的属性或者方法</p>
+<p>多态：父类引用指向子类实例</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/07/23/java%E5%9F%BA%E7%A1%80/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
+
   
 
-    
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -215,8 +364,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
